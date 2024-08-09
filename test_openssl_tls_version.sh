@@ -1,0 +1,1 @@
+openssl s_client -connect cadastro-uat.tupperware.com.br:443 -tls1_2
