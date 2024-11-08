@@ -6,6 +6,13 @@
 # Export the Private Key:
 # Use the following command to extract the private key from the .pfx file:
 
+## If you have the following error: 
+Could not read key from cert.pfx
+4087DB568E7F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:../crypto/evp/evp_fetch.c:349:Global default library context, Algorithm (RC2-40-CBC : 0), Properties ()
+mdiloreto@MDLPC00:/mnt/c/Users/Mateo/AppData/Local/Posh-ACME/LE_PROD/1629371947/site.multiclouds.tech$ 
+
+## You must use: 
+openssl pkcs12 -in cert.pfx -out key.pem -nodes -legacy
 
 openssl pkcs12 -in yourfile.pfx -nocerts -out key.pem -nodes
     # yourfile.pfx: Replace with the name of your .pfx file.
